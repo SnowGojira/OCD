@@ -7,8 +7,6 @@ var str_medium='<p class="result">你的强迫症指数<span>%data%</span>分<br
 var str_heavy='<p class="result">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的晚期患者<br>治愈的可能性很小，请尽量保持心情愉快</p>';
 var str_survive='<p class="result">你的强迫症指数<span>%data%</span>分<br>特新型手机病毒强迫症的免疫者<br>天啊，你还是人吗？</p>';
 
-var share_title="你有病你知道吗？";
-var share_desc="特新型手机病毒强迫症一键测试";
 
 $(function () {
 
@@ -97,3 +95,71 @@ var log=function(name,log){
 
 };
 
+/**
+ * desc: weixin share function
+ * auth: Haku Hal
+ * date: 2017-7-17
+ */
+function shareAjax(){
+    /**
+     * url需要更改为正式服务器的地址
+     */
+    var url="http://weixin.assemblemedia.cn/show-case/ocd/";
+    var imageUrl=url+"images/shareIcon.png";
+    var shareTitle="你有病你知道吗？";
+    var shareDesc="特新型手机病毒强迫症一键测试";
+    var shareLink=url+'index.html';
+
+    wx.ready(function(){
+        wx.onMenuShareTimeline({
+            title:sharedesc, // 分享标题
+            link: shareLink, // 分享链接
+            imgUrl: imageUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareAppMessage({
+            title: sharetitle, // 分享标题
+            desc: sharedesc, // 分享描述
+            link: shareLink, // 分享链接
+            imgUrl: imageUrl, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareQQ({
+            title: sharetitle, // 分享标题
+            desc: sharedesc, // 分享描述
+            link: shareLink, // 分享链接
+            imgUrl: imageUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareWeibo({
+            title: sharetitle, // 分享标题
+            desc: sharedesc, // 分享描述
+            link: shareLink, // 分享链接
+            imgUrl: imageUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+
+}

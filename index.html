@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>What is your ob?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <script src="http://sdk.talkingdata.com/app/h5/v1?appid=BAC159307CCC4B1196DA4E9CBA28C0ED"></script>
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -15,60 +19,70 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+  <div class="page preload none"></div>
+  <div class="page pageStart none"></div>
+
   <div class="page page1">
       <div class="select">
-          <button class="button1">是</button>
-          <button class="button1">否</button>
+          <button class="button1" id="yes1" data-choice="18">是</button>
+          <button class="button1" id="no1" data-choice="0">否</button>
       </div>
 
   </div>
 
   <div class="page page2 none">
       <div class="select">
-          <button class="button2">是</button>
-          <button class="button2">否</button>
+          <button class="button2" id="yes2" data-choice="12">是</button>
+          <button class="button2" id="no2" data-choice="0">否</button>
       </div>
 
   </div>
   <div class="page page3 none">
       <div class="select">
-          <button class="button3">是</button>
-          <button class="button3">否</button>
+          <button class="button3" id="yes3" data-choice="15">是</button>
+          <button class="button3" id="no3" data-choice="0">否</button>
       </div>
 
   </div>
   <div class="page page4 none">
       <div class="select">
-          <button class="button4">是</button>
-          <button class="button4">否</button>
+          <button class="button4" id="yes4" data-choice="16">是</button>
+          <button class="button4" id="no4" data-choice="0">否</button>
       </div>
 
   </div>
   <div class="page page5 none">
       <div class="select">
-          <button class="button5">是</button>
-          <button class="button5">否</button>
+          <button class="button5" id="yes5" data-choice="9">是</button>
+          <button class="button5" id="no5" data-choice="0">否</button>
       </div>
 
   </div>
   <div class="page page6 none">
       <div class="select">
-          <button class="button6">是</button>
-          <button class="button6">否</button>
+          <button class="button6" id="yes6" data-choice="7">是</button>
+          <button class="button6" id="no6" data-choice="0">否</button>
       </div>
 
   </div>
   <div class="page page7 none">
       <div class="select">
-          <button class="button7">是</button>
-          <button class="button7">否</button>
+          <button class="button7" id="yes7" data-choice="6">是</button>
+          <button class="button7" id="no7" data-choice="0">否</button>
       </div>
 
   </div>
   <div class="page page8 none">
       <div class="select">
-          <button class="button8">是</button>
-          <button class="button8">否</button>
+          <button class="button8" id="yes8" data-choice="17">是</button>
+          <button class="button8" id="no8" data-choice="0">否</button>
+      </div>
+
+  </div>
+
+  <div class="page page9 none">
+      <div class="select">
+          <button class="button9" id="yes9" >返回</button>
       </div>
 
   </div>

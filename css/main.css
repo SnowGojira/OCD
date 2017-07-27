@@ -46,6 +46,28 @@ body{
     background: #f3f3f3;
 }
 
+.hintBox{
+    position: fixed;
+    float: left;
+    display: inline-block;
+    width: 60%;
+    height: 5%;
+    left: 0;
+    right:0;
+    top: 2%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 90;
+}
+
+.hintBox li{
+    display: inline-block;
+}
+.dotImg{
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
 .page1{
     z-index: 10;
     background: linear-gradient(180deg, #16ca17 0%, #00bd05 100%);
@@ -89,7 +111,7 @@ body{
 
 
 .page9{
-    z-index: 90;
+    z-index: 1000;
     background: linear-gradient(133deg, #78f0a4 0%, #0f5ead 100%);
 
 }

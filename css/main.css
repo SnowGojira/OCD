@@ -11,19 +11,26 @@ body{
     display: none;
 }
 
+
 .button1{
     width: 3.8rem;
     height:3.8rem;
     margin: 2.2rem;
 }
 
-
 .select{
     width: 100%;
     height: auto;
     text-align: center;
-    margin-top:20vh;
+    margin-top:13vh;
 }
+
+.quiz{
+    font-size: 1.02rem;
+    line-height: 1.5rem;
+    color: #fff;
+}
+
 .pageStart{
     z-index:5;
     background: #f3f3f3;
@@ -31,7 +38,8 @@ body{
 
 .page1{
     z-index: 10;
-    background:#3e8cf8;
+    background: linear-gradient(90deg, #16ca17 0%, #00bd05 100%);
+
 }
 
 .page2{

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('/img/simpfy.ttf'); /* IE9 Compat Modes */
+    src: url('../img/simpfy.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../img/simpfy.ttf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../img/simpfy.ttf') format('woff'), /* Modern Browsers */
+    url('../img/simpfy.ttf') format('svg'); /* Legacy iOS */
+}
+
 body{
     overflow: hidden;
 }
@@ -26,6 +35,7 @@ body{
 }
 
 .quiz{
+    font-family: myFont;
     font-size: 1.02rem;
     line-height: 1.5rem;
     color: #fff;

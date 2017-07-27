@@ -9,7 +9,20 @@ var str_survive='<p class="result">你的强迫症指数<span>%data%</span>分<b
 
 
 $(function () {
+    /**
+     * weChat share func executed
+     */
+    shareAjax();
+    shareWechat();
 
+    /**
+     * add the pageStart Animate
+     */
+    toastTextAnimation();
+
+    /**
+     * main logic
+     */
     pageClick('1');
     pageClick('2');
     pageClick('3');
@@ -22,6 +35,17 @@ $(function () {
 
 
 });
+
+var toastTextAnimation=function(){
+    //show first toast
+    //show first gif animation
+    //show second toast
+    //show second gif animation
+    //show the hint cover,give the href link
+
+
+
+};
 
 
 var pageClick=function (str){
@@ -100,19 +124,53 @@ var log=function(name,log){
  * auth: Haku Hal
  * date: 2017-7-17
  */
-function shareAjax(){
+
+function shareAjax() {
+    $.ajax(
+        {type:'get',
+            url:'ajax_getconfig.php',
+            success:function(data){
+                console.log("ajax success:"+data);
+                console.log("ajax success:"+JSON.parse(data).appId);
+                console.log("ajax success:"+JSON.parse(data).timestamp);
+                console.log("ajax success:"+JSON.parse(data).nonceStr);
+                console.log("ajax success:"+JSON.parse(data).signature);
+
+                wx.config({
+                    debug: false,
+                    appId:JSON.parse(data).appId,
+                    timestamp: JSON.parse(data).timestamp,
+                    nonceStr: JSON.parse(data).nonceStr,
+                    signature: JSON.parse(data).signature,
+                    jsApiList: [
+                        // 所有要调用的 API 都要加到这个列表中
+                        'checkJsApi',
+                        'onMenuShareTimeline',//
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'onMenuShareWeibo'
+
+                    ]
+                });
+
+            }
+        });
+
+}
+
+function shareWechat(){
     /**
      * url需要更改为正式服务器的地址
      */
     var url="http://weixin.assemblemedia.cn/show-case/ocd/";
-    var imageUrl=url+"images/shareIcon.png";
+    var imageUrl=url+"img/shareIcon.png";
     var shareTitle="你有病你知道吗？";
     var shareDesc="特新型手机病毒强迫症一键测试";
     var shareLink=url+'index.html';
 
     wx.ready(function(){
         wx.onMenuShareTimeline({
-            title:sharedesc, // 分享标题
+            title:shareDesc, // 分享标题
             link: shareLink, // 分享链接
             imgUrl: imageUrl, // 分享图标
             success: function () {
@@ -123,8 +181,8 @@ function shareAjax(){
             }
         });
         wx.onMenuShareAppMessage({
-            title: sharetitle, // 分享标题
-            desc: sharedesc, // 分享描述
+            title: shareTitle, // 分享标题
+            desc: shareDesc, // 分享描述
             link: shareLink, // 分享链接
             imgUrl: imageUrl, // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
@@ -137,8 +195,8 @@ function shareAjax(){
             }
         });
         wx.onMenuShareQQ({
-            title: sharetitle, // 分享标题
-            desc: sharedesc, // 分享描述
+            title: shareTitle, // 分享标题
+            desc: shareDesc, // 分享描述
             link: shareLink, // 分享链接
             imgUrl: imageUrl, // 分享图标
             success: function () {
@@ -149,8 +207,8 @@ function shareAjax(){
             }
         });
         wx.onMenuShareWeibo({
-            title: sharetitle, // 分享标题
-            desc: sharedesc, // 分享描述
+            title: shareTitle, // 分享标题
+            desc: shareDesc, // 分享描述
             link: shareLink, // 分享链接
             imgUrl: imageUrl, // 分享图标
             success: function () {

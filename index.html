@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--新学的知识可以保证竖向全屏的信息-->
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta http-equiv="expires" content="0">
 
 
     <script src="http://sdk.talkingdata.com/app/h5/v1?appid=BAC159307CCC4B1196DA4E9CBA28C0ED"></script>
@@ -16,16 +22,25 @@
 
     <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
     <script src="js/lib/jquery-3.2.1.min.js"></script>
+    <script src="js/lib/jweixin-1.0.0.js"></script>
     <script src="js/main.js"></script>
 </head>
-<body>
+<body >
   <div class="page preload none"></div>
-  <div class="page pageStart none"></div>
+
+  <div class="page pageStart none">
+      <div id="text1" class="message left"></div>
+      <div id="text2" class="message left"></div>
+      <div id="text3" class="message right"></div>
+      <div id="text4" class="message left"></div>
+      <div id="text5" class="message right"></div>
+      <div id="send"></div>
+  </div>
 
   <div class="page page1">
       <div class="select">
-          <button class="button1" id="yes1" data-choice="18">是</button>
-          <button class="button1" id="no1" data-choice="0">否</button>
+          <img class="button1" src="img/r.png" id="yes1" data-choice="18" alt="是"/>
+          <img class="button1" src="img/w.png" id="no1" data-choice="0" alt="否"/>
       </div>
 
   </div>

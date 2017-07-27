@@ -26,90 +26,117 @@
     <script src="js/main.js"></script>
 </head>
 <body >
-  <div class="page preload none"></div>
+  <section class="page preload none"></section>
 
-  <div class="page pageStart none">
+  <section class="page pageStart none">
       <div id="text1" class="message left"></div>
       <div id="text2" class="message left"></div>
       <div id="text3" class="message right"></div>
       <div id="text4" class="message left"></div>
       <div id="text5" class="message right"></div>
       <div id="send"></div>
-  </div>
+  </section>
 
-  <div class="page page1">
+  <section class="page page1 none">
       <div class="select">
           <p class="quiz">看到从朋友圈冒出的小红点<br>必须立刻、马上、迅速戳破</p>
           <img class="button button1" src="img/r.png" id="yes1" data-choice="18" alt="是"/>
           <img class="button button1" src="img/w.png" id="no1" data-choice="0" alt="否"/>
       </div>
 
-  </div>
+  </section>
 
-  <div class="page page2 none">
+  <section class="page page2 none">
       <div class="select">
           <p class="quiz">每次召唤外卖<br>都要跟踪无数次小哥到哪了</p>
           <img class="button button2" src="img/r.png" id="yes2" data-choice="12" alt="是"/>
           <img class="button button2" src="img/w.png" id="no2" data-choice="0" alt="否"/>
       </div>
 
-  </div>
+  </section>
 
-  <div class="page page3 none">
+  <section class="page page3 none">
       <div class="select">
-          <p class="quiz">要不要剁手买买买呢？<br>先把买家秀一张不漏地参考一遍再说</p>
+          <p class="quiz">要不要剁手买买买呢？<br>先把买家秀一张不漏地考察一遍再说</p>
           <img class="button button3" src="img/r.png" id="yes3" data-choice="15" alt="是"/>
           <img class="button button3" src="img/w.png" id="no3" data-choice="0" alt="否"/>
       </div>
 
-  </div>
-  <div class="page page4 none">
+  </section>
+  <section class="page page4 none">
       <div class="select">
           <p class="quiz">自拍照必须美颜才能发朋友圈<br>不然就像裸奔，怪害羞的</p>
           <img class="button button4" src="img/r.png" id="yes4" data-choice="16" alt="是"/>
           <img class="button button4" src="img/w.png" id="no4" data-choice="0" alt="否"/>
       </div>
 
-  </div>
-  <div class="page page5 none">
+  </section>
+  <section class="page page5 none">
       <div class="select">
           <p class="quiz">这部电影评分多少？<br>我从不看X分以下的电影</p>
           <img class="button button5" src="img/r.png" id="yes5" data-choice="9" alt="是"/>
           <img class="button button5" src="img/w.png" id="no5" data-choice="0" alt="否"/>
       </div>
 
-  </div>
-  <div class="page page6 none">
+  </section>
+  <section class="page page6 none">
       <div class="select">
           <p class="quiz">弹幕就是视频的下饭菜<br>必须得开</p>
           <img class="button button6" src="img/r.png" id="yes6" data-choice="7" alt="是"/>
           <img class="button button6" src="img/w.png" id="no6" data-choice="0" alt="否"/>
       </div>
 
-  </div>
-  <div class="page page7 none">
+  </section>
+  <section class="page page7 none">
       <div class="select">
           <p class="quiz">今天大家又在<br>热（ba）搜（gua）什么呢？</p>
           <img class="button button7" src="img/r.png" id="yes7" data-choice="6" alt="是"/>
           <img class="button button7" src="img/w.png" id="no7" data-choice="0" alt="否"/>
       </div>
 
-  </div>
-  <div class="page page8 none">
+  </section>
+  <section class="page page8 none">
       <div class="select">
           <p class="quiz">“唉我手机呢？”“有充电宝吗？”“wifi密码多少？”<br>每天呈360°无死角3D环绕音出现</p>
           <img class="button button8" src="img/r.png" id="yes8" data-choice="17" alt="是"/>
           <img class="button button8" src="img/w.png" id="no8" data-choice="0" alt="否"/>
       </div>
 
-  </div>
+  </section>
 
-  <div class="page page9 none">
-      <div class="select">
-          <button class="button9" id="yes9" >返回</button>
+  <section class="page page9 none">
+      <div class="result">
+          <img src="img/pageResult/pl1.png" style="width: 100%;height: auto" alt="抬头"/>
+          <div class="tag">
+              <img src="img/pageResult/pl2.png" style="width:2.7rem;height: 1rem">
+              <p id="random">100</p>
+          </div>
+          <div>
+              <p class="diagnosis" style="margin-top:7vh;margin-bottom: 3vh">诊断及建议：</p>
+          </div>
+
+          <ul style="float: right">
+              <li>
+                  <img src="img/pageResult/pl3.png" style="width: 6.5rem;height: 1.4rem;margin-top: 7vh;float:right;" alt="签名"/>
+              </li>
+              <li>
+                  <p id="date" style="font-size: 0.7rem;float: right;margin-top: 0.5rem;">2017年7月21日</p>
+              </li>
+              <li>
+                  <p style="float:right;font-size: 0.7rem;margin-top: 0.5rem;">(盖章有效)</p>
+              </li>
+
+          </ul>
+
+          <div class="qrcode">
+              <img src="img/pageResult/pl4.png" style="width: 21vw;height: 21vw;"/>
+              <p style="font-size: 0.7rem;margin-top: 1.5rem;line-height: 1.1rem">若有未尽的类似临床表现<br>欢迎长按二维码回复后台<br><br>偷偷告诉你<br>这对于拯救地球意义重大</p>
+          </div>
       </div>
 
-  </div>
+
+
+  </section>
 
 
 </body>

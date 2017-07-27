@@ -8,7 +8,9 @@
 }
 
 body{
+    font-family: myFont;
     overflow: hidden;
+    color: #fff;
 }
 .page{
     width: 100%;
@@ -35,10 +37,8 @@ body{
 }
 
 .quiz{
-    font-family: myFont;
     font-size: 1.02rem;
     line-height: 1.5rem;
-    color: #fff;
 }
 
 .pageStart{
@@ -87,7 +87,54 @@ body{
     background: linear-gradient(180deg, #cdc1d2 0%, #f7f7f7 100%);
 }
 
+
 .page9{
     z-index: 90;
-    background:#333;
+    background: linear-gradient(133deg, #78f0a4 0%, #0f5ead 100%);
+
+}
+
+.result{
+    width: 75vw;
+    height: auto;
+    margin-top:7vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.page9 .title{
+    width: 100%;
+    height: auto;
+}
+
+.tag{
+    display: flex;
+    float: right;
+    vertical-align: baseline;
+    margin-top: 0.3rem;
+    margin-right: 0.2rem;
+}
+
+.number{
+    width: 2.7rem;
+    height: 1rem;
+}
+
+.tag #random{
+
+    font-size: 1rem;
+
+}
+
+.diagnosis{
+   font-size: 0.95rem;
+    line-height: 1.2rem;
+}
+
+.qrcode{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top:32vh;
 }

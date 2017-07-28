@@ -9,6 +9,42 @@ var str_survive='<p class="diagnosis">你的强迫症指数<span>%data%</span>�
 
 var points=[];
 
+/**************************************preload Logic***********************************/
+window.onload=function(){
+    manifest = [
+        {src: 'img/simpfy.ttf', id: 'font'},
+        {src: 'img/simpfy.ttf', id: 'font'}
+
+
+    ];//预加载
+    loader = new createjs.LoadQueue(false);
+    loader.setMaxConnections(100);
+    loader.maintainScriptOrder=true;
+
+    loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
+    loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
+    loader.loadManifest(manifest);
+
+};
+
+function handleFileProgress(){//加载中函数
+    var percent=loader.progress*100|0+'%';
+    document.getElementById('loadPercent').innerHTML=percent+"%";
+}
+
+function handleComplete(){
+    // 显示下一张图
+
+    // myAudio.play();
+    frontScene1In();
+    Scene1In();
+    bubble();
+    train1In();
+    $('#pageLoad').hide();
+    $('#page1').show();
+}
+
+/**************************************Main Logic***********************************/
 $(function () {
     /**
      * weChat share func executed

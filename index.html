@@ -27,10 +27,15 @@
     <script src="js/lib/jweixin-1.0.0.js"></script>
     <script src="js/main.js"></script>
 </head>
-<body >
-  <section class="page preload none"></section>
+<body>
 
-  <section class="page pageStart ">
+  <section class="page preload">
+      <img src="img/preload.gif" alt="Assemble" id="logo">
+      <!--This id is for changing the percentage.-->
+      <div id="percent">100%</div>
+  </section>
+
+  <section class="page pageStart none">
       <button class="buttonStart">开始答题</button>
       <div id="text1" class="message left"></div>
       <div id="text2" class="message left"></div>

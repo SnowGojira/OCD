@@ -33,18 +33,17 @@ function handleFileProgress(){//加载中函数
 }
 
 function handleComplete(){
-    // 显示下一张图
+    //show pageStart Animation
 
-    // myAudio.play();
-    frontScene1In();
-    Scene1In();
-    bubble();
-    train1In();
-    $('#pageLoad').hide();
-    $('#page1').show();
+    /**
+     * add the pageStart Animate
+     */
+    toastTextAnimation();
 }
 
 /**************************************Main Logic***********************************/
+
+
 $(function () {
     /**
      * weChat share func executed
@@ -52,15 +51,14 @@ $(function () {
     shareAjax();
     shareWechat();
 
-    /**
-     * add the pageStart Animate
-     */
-    toastTextAnimation();
 
     /**
-     * main logic
+     * index refer to page number
+     * @type {number}
      */
+
     var index=1;
+
     $('.buttonStart').click(function(){
         $('.pageStart').hide();
         $('.page1').show();
@@ -72,10 +70,10 @@ $(function () {
         index++;
     });
 
-        $('.button').click(function(){
+    $('.button').click(function(){
             pageClick(index);
             index++;
-        });
+    });
 
     $('.submit').click(function () {
 

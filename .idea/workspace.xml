@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="115d9d03-f244-4060-9b64-b3f36324b279" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lib/easeljs-0.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lib/preloadjs-0.6.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/preload.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
@@ -32,7 +32,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
+            <state relative-caret-position="286">
               <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
               <folding>
                 <element signature="n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -53,16 +53,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-306">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+            <state relative-caret-position="376">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
-                <element signature="n#!!block;n#handleFileProgress#0" expanded="false" />
-                <element signature="n#!!block;n#handleComplete#0" expanded="false" />
-                <element signature="e#4555#4851#0" expanded="false" />
+                <element signature="e#4465#4761#0" expanded="false" />
                 <element signature="n#!!block;n#shareAjax#0" expanded="false" />
                 <element signature="n#!!block;n#shareWechat#0" expanded="false" />
               </folding>
@@ -75,16 +83,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -131,9 +129,10 @@
         <option value="$PROJECT_DIR$/ajax_getconfig.php" />
         <option value="$PROJECT_DIR$/access_token.json" />
         <option value="$PROJECT_DIR$/css/reset.css" />
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/css/preload.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -277,7 +276,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../txl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../assemble-preload" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -286,8 +285,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\assemble微信设计\Assemble-h5\ob\js\lib" />
       <recent name="F:\assemble微信设计\Assemble-h5\ob\img" />
+      <recent name="F:\assemble微信设计\Assemble-h5\ob\css" />
+      <recent name="F:\assemble微信设计\Assemble-h5\ob\js\lib" />
       <recent name="F:\assemble微信设计\Assemble-h5\ob" />
       <recent name="F:\assemble微信设计\Assemble-h5\ob\styles" />
     </key>
@@ -371,7 +371,7 @@
       <workItem from="1499925439013" duration="101000" />
       <workItem from="1500275440517" duration="15295000" />
       <workItem from="1501076897109" duration="28388000" />
-      <workItem from="1501213774225" duration="5027000" />
+      <workItem from="1501213774225" duration="6513000" />
     </task>
     <task id="LOCAL-00001" summary="add Log function and the give grades function">
       <created>1500288959093</created>
@@ -464,11 +464,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501215171401</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="input the  preload logic">
+      <created>1501227005202</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1501227005202</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63597000" />
+    <option name="totallyTimeSpent" value="65083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="51" width="1924" height="987" extended-state="0" />
@@ -518,7 +525,8 @@
     <MESSAGE value="add the accompanied style to the ul list" />
     <MESSAGE value="add the list to store the value" />
     <MESSAGE value="commit result logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit result logic" />
+    <MESSAGE value="input the  preload logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="input the  preload logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -555,9 +563,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
-            <element signature="n#!!block;n#handleFileProgress#0" expanded="false" />
-            <element signature="n#!!block;n#handleComplete#0" expanded="false" />
-            <element signature="e#4555#4851#0" expanded="false" />
+            <element signature="e#4465#4761#0" expanded="false" />
             <element signature="n#!!block;n#shareAjax#0" expanded="false" />
             <element signature="n#!!block;n#shareWechat#0" expanded="false" />
           </folding>
@@ -616,9 +622,7 @@
           <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
-            <element signature="n#!!block;n#handleFileProgress#0" expanded="false" />
-            <element signature="n#!!block;n#handleComplete#0" expanded="false" />
-            <element signature="e#4555#4851#0" expanded="false" />
+            <element signature="e#4465#4761#0" expanded="false" />
             <element signature="n#!!block;n#shareAjax#0" expanded="false" />
             <element signature="n#!!block;n#shareWechat#0" expanded="false" />
           </folding>
@@ -653,9 +657,7 @@
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
-            <element signature="n#!!block;n#handleFileProgress#0" expanded="false" />
-            <element signature="n#!!block;n#handleComplete#0" expanded="false" />
-            <element signature="e#4555#4851#0" expanded="false" />
+            <element signature="e#4465#4761#0" expanded="false" />
             <element signature="n#!!block;n#shareAjax#0" expanded="false" />
             <element signature="n#!!block;n#shareWechat#0" expanded="false" />
           </folding>
@@ -706,9 +708,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
-            <element signature="n#!!block;n#handleFileProgress#0" expanded="false" />
-            <element signature="n#!!block;n#handleComplete#0" expanded="false" />
-            <element signature="e#4555#4851#0" expanded="false" />
+            <element signature="e#4465#4761#0" expanded="false" />
             <element signature="n#!!block;n#shareAjax#0" expanded="false" />
             <element signature="n#!!block;n#shareWechat#0" expanded="false" />
           </folding>
@@ -813,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/lib/easeljs-0.7.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -829,9 +821,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/preload.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
+        <state relative-caret-position="286">
           <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
           <folding>
             <element signature="n#section#4;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -853,16 +853,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        <state relative-caret-position="376">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
-            <element signature="n#!!block;n#handleFileProgress#0" expanded="false" />
-            <element signature="n#!!block;n#handleComplete#0" expanded="false" />
-            <element signature="e#4555#4851#0" expanded="false" />
+            <element signature="e#4465#4761#0" expanded="false" />
             <element signature="n#!!block;n#shareAjax#0" expanded="false" />
             <element signature="n#!!block;n#shareWechat#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

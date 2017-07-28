@@ -8,7 +8,7 @@
 }
 
 body{
-    font-family: myFont;
+    font-family: myFont Arial;
     overflow: hidden;
     color: #fff;
 }
@@ -20,6 +20,24 @@ body{
 }
 .none{
     display: none;
+}
+
+.preload{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: #0b0b1c;
+}
+#logo{
+    width: 24vw;
+    height: auto;
+    margin-top: 32.7vh;
+}
+#percent{
+    font-family: myFont, Arail;
+    color: #fff;
+    font-size: 0.88rem;
+    margin-top: 0.3rem;
 }
 
 

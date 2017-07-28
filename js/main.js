@@ -7,6 +7,7 @@ var str_medium='<p class="diagnosis">你的强迫症指数为<span>%data%</span>
 var str_heavy='<p class="diagnosis">你的强迫症指数为<span>%data%</span>分<br>是特新型手机病毒强迫症的晚期患者<br>治愈的可能性很小，请尽量保持心情愉快</p>';
 var str_survive='<p class="diagnosis">你的强迫症指数为<span>%data%</span>分<br>特新型手机病毒强迫症的免疫者<br>天啊，你还是人吗？</p>';
 
+var points=[];
 
 $(function () {
     /**
@@ -60,7 +61,7 @@ var toastTextAnimation=function(){
 
 
 var pageClick=function (index){
-
+    if
     $('.button'+index).click(function () {
         console.log('page'+index);
         $('.page'+index).hide();
@@ -69,19 +70,40 @@ var pageClick=function (index){
     });
 
     $('#yes'+index).click(function () {
+        var point=$(this).attr('data-choice');
+        points.push(point);
         console.log('yes'+index);
         TDAPP.onEvent("shi"+index);
 
     });
     $('#no'+index).click(function () {
-        console.log('no'+str);
-        TDAPP.onEvent("fou"+str);
+        console.log('no'+index);
+        TDAPP.onEvent("fou"+index);
+
+        var point=$(this).attr('data-choice');
+        points.push(point);
     });
 
    changeHintTag(index);
 
+    if (index==9){
+        var grades=0;
+        console.log(points);
+        for(var i=0;i<=7;i++){
+            var point=parseInt(points[i]);
+            grades=grades+point;
+            console.log(point +" "+grades);
+
+            // console.log(grades);
+
+        }
+
+
+    }
 
 };
+
+
 
 /**
  * des:change the hint tag style

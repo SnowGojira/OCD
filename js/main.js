@@ -2,10 +2,10 @@
  * Created by hakuh on 2017/7/10.
  */
 
-var str_light='<p class="diagnosis">你的强迫症指数为<span>%data%</span>分<br>是特新型手机病毒强迫症的早期患者<br>好棒棒，像你这样的人才已经不多了~</p>';
-var str_medium='<p class="diagnosis">你的强迫症指数为<span>%data%</span>分<br>是特新型手机病毒强迫症的中期患者<br>少低头，否则皇冠会掉、吃枣药丸</p>';
-var str_heavy='<p class="diagnosis">你的强迫症指数为<span>%data%</span>分<br>是特新型手机病毒强迫症的晚期患者<br>治愈的可能性很小，请尽量保持心情愉快</p>';
-var str_survive='<p class="diagnosis">你的强迫症指数为<span>%data%</span>分<br>特新型手机病毒强迫症的免疫者<br>天啊，你还是人吗？</p>';
+var str_light='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的早期患者<br>好棒棒，像你这样的人才已经不多了~</p>';
+var str_medium='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的中期患者<br>少低头，否则皇冠会掉、吃枣药丸</p>';
+var str_heavy='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的晚期患者<br>治愈的可能性很小，请尽量保持心情愉快</p>';
+var str_survive='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>特新型手机病毒强迫症的免疫者<br>天啊，你还是人吗？</p>';
 
 var points=[];
 
@@ -38,9 +38,25 @@ $(function () {
 
         $('.button').click(function(){
             pageClick(index);
-
             index++;
         });
+
+    $('.submit').click(function () {
+
+            var grades=0;
+            console.log(points);
+            for(var i=0;i<=7;i++){
+                var point=parseInt(points[i]);
+                grades=grades+point;
+                console.log(point +" "+grades);
+            };
+
+            $('.page8').hide();
+            $('.page9').show();
+
+        giveGrades(grades);
+
+    });
 
 
 
@@ -61,13 +77,21 @@ var toastTextAnimation=function(){
 
 
 var pageClick=function (index){
-    if
-    $('.button'+index).click(function () {
-        console.log('page'+index);
-        $('.page'+index).hide();
-        $('.page'+(index+1)).show();
+    if(index==8){
+        $('.button'+index).click(function () {
+            $('.submit').show();
+            console.log('page'+index);
+        });
 
-    });
+    }else{
+        $('.button'+index).click(function () {
+            console.log('page'+index);
+            $('.page'+index).hide();
+            $('.page'+(index+1)).show();
+
+        });
+    }
+
 
     $('#yes'+index).click(function () {
         var point=$(this).attr('data-choice');
@@ -85,21 +109,6 @@ var pageClick=function (index){
     });
 
    changeHintTag(index);
-
-    if (index==9){
-        var grades=0;
-        console.log(points);
-        for(var i=0;i<=7;i++){
-            var point=parseInt(points[i]);
-            grades=grades+point;
-            console.log(point +" "+grades);
-
-            // console.log(grades);
-
-        }
-
-
-    }
 
 };
 
@@ -148,7 +157,7 @@ var giveGrades=function (num) {
 };
 
 function replace (variety,num) {
-    $('###').append(variety.replace("%data%",num));
+    $('#resultDesc').append(variety.replace("%data%",num));
 }
 
     /**

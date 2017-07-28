@@ -23,14 +23,25 @@ $(function () {
     /**
      * main logic
      */
-    pageClick('1');
-    pageClick('2');
-    pageClick('3');
-    pageClick('4');
-    pageClick('5');
-    pageClick('6');
-    pageClick('7');
-    pageClick('8');
+    var index=1;
+    $('.buttonStart').click(function(){
+        $('.pageStart').hide();
+        $('.page1').show();
+        $('.hintBox').show();
+        $('.hintBox').attr('display','inline-block');
+
+        pageClick(index);
+
+        index++;
+    });
+
+        $('.button').click(function(){
+            pageClick(index);
+
+            index++;
+        });
+
+
 
 
 
@@ -48,28 +59,47 @@ var toastTextAnimation=function(){
 };
 
 
-var pageClick=function (str){
+var pageClick=function (index){
 
-    var strPlus=parseInt(str)+1;
-    log('pageClick',strPlus);
-
-    $('.button'+str).click(function () {
-        console.log('page'+str);
-        $('.page'+str).hide();
-        $('.page'+strPlus).show();
-    });
-
-    $('#yes'+str).click(function () {
-        console.log('yes'+str);
-        TDAPP.onEvent("shi"+str);
+    $('.button'+index).click(function () {
+        console.log('page'+index);
+        $('.page'+index).hide();
+        $('.page'+(index+1)).show();
 
     });
-    $('#no'+str).click(function () {
+
+    $('#yes'+index).click(function () {
+        console.log('yes'+index);
+        TDAPP.onEvent("shi"+index);
+
+    });
+    $('#no'+index).click(function () {
         console.log('no'+str);
         TDAPP.onEvent("fou"+str);
     });
 
+   changeHintTag(index);
+
+
 };
+
+/**
+ * des:change the hint tag style
+ * params:
+ * auth:Haku Hal
+ * date:2017-7-28
+ */
+
+var changeHintTag=function (str){
+    var index= parseInt(str);
+
+    $('.dotImg').attr('src','img/dotn.png');
+
+    $('.dot'+index).attr('src','img/dot.png');
+
+    log.a('changeHintTag',index);
+
+}
 
     /**
      * des: judge the result then add the appropriate class the dom.
@@ -80,16 +110,16 @@ var pageClick=function (str){
 
 var giveGrades=function (num) {
     if (num===0){
-        log("giveGrades 0",num);
+        log.a("giveGrades 0",num);
         replace(str_survive,num);
     }else if(num>0 && num<=30){
-        log("giveGrades light",num);
+        log.a("giveGrades light",num);
         replace(str_light,num);
     }else if(num>30 && num <=70){
-        log("giveGrades mid",num);
+        log.a("giveGrades mid",num);
         replace(str_medium,num);
     }else {
-        log("giveGrades heavy",num);
+        log.a("giveGrades heavy",num);
         replace(str_heavy,num);
     }
 
@@ -101,23 +131,20 @@ function replace (variety,num) {
 
     /**
      * Des: This is Log class for console to log the functions data.
-     * Para: 'name' is function's name.
-     *       'str' is the parameter you want to detect,
-     *       if 'str' equals to null just return the function name you want to call.
      * auth: Haku Hal
      * data: 2017-7-17
      */
-
-var log=function(name,log){
-
-
-    if(log==null){
-        console.log(name+" is executed.");
-    }else{
-        console.log(name+" is executed. The value is "+log);
+var log={
+    f:function (str) {
+        return console.log(str+" is executed.");
+    },
+        v:function(str){
+        return console.log("The target value is "+str);
+        },
+        a:function (func,val) {
+            return console.log(func+" is executed & target value is "+val);
+        }
     }
-
-};
 
 /**
  * desc: weixin share function

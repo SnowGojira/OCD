@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="115d9d03-f244-4060-9b64-b3f36324b279" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/dot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/dotn.png" />
+    <list default="true" id="115d9d03-f244-4060-9b64-b3f36324b279" name="Default" comment="add the hint list to the top">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="ob.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,8 +84,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="1224">
+              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -148,8 +145,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-96" />
-    <option name="y" value="111" />
+    <option name="x" value="-8" />
+    <option name="y" value="51" />
     <option name="width" value="1924" />
     <option name="height" value="987" />
   </component>
@@ -374,7 +371,7 @@
       <workItem from="1499672003198" duration="14786000" />
       <workItem from="1499925439013" duration="101000" />
       <workItem from="1500275440517" duration="15295000" />
-      <workItem from="1501076897109" duration="20967000" />
+      <workItem from="1501076897109" duration="21674000" />
     </task>
     <task id="LOCAL-00001" summary="add Log function and the give grades function">
       <created>1500288959093</created>
@@ -432,14 +429,21 @@
       <option name="project" value="LOCAL" />
       <updated>1501176873704</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add the hint list to the top">
+      <created>1501178345000</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1501178345000</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51149000" />
+    <option name="totallyTimeSpent" value="51856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-96" y="111" width="1924" height="987" extended-state="0" />
+    <frame x="-8" y="51" width="1924" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20356768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -481,7 +485,8 @@
     <MESSAGE value="customize the font family" />
     <MESSAGE value="fit quiz style" />
     <MESSAGE value="fit the result page style" />
-    <option name="LAST_COMMIT_MESSAGE" value="fit the result page style" />
+    <MESSAGE value="add the hint list to the top" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the hint list to the top" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,8 +765,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="1224">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
         </state>
       </provider>

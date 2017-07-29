@@ -2,10 +2,6 @@
  * Created by hakuh on 2017/7/10.
  */
 
-var str_light='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的早期患者<br>好棒棒，像你这样的人才已经不多了~</p>';
-var str_medium='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的中期患者<br>少低头，否则皇冠会掉、吃枣药丸</p>';
-var str_heavy='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的晚期患者<br>治愈的可能性很小，请尽量保持心情愉快</p>';
-var str_survive='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>特新型手机病毒强迫症的免疫者<br>天啊，你还是人吗？</p>';
 
 var points=[];
 
@@ -157,42 +153,6 @@ var pageClick=function (index){
 };
 
 
-var stage_m,container_m;
-function messageAnim(){
-    console.log("canvas 创建成功："+w+" "+h);
-
-    stage_m = new createjs.Stage("messageCanvas");
-    stage_m.canvas.width=w;
-    stage_m.canvas.height=h;
-
-    console.log(w+" "+h);
-
-    var spriteSheet = new createjs.SpriteSheet({
-        framerate: 15,
-        "images": ['./img/grunt1.png'],
-        "frames": {
-            width:400,
-            height:550,
-            count:118
-        },
-        "animations": {
-            "run": [0, 117, "run"]
-        }
-    });
-    container_m = new createjs.Sprite(spriteSheet, "run");
-    container_m.set({x:0.18*w,y:0.08*h,scaleX: w*0.686/400,scaleY:h*0.598/550 });
-
-    stage_m.addChild( container_m);
-    createjs.Ticker.timingMode = createjs.Ticker.RAF;
-    createjs.Ticker.on('tick',stage_m);
-}
-
-
-
-
-
-
-
 /**
  * des:change the hint tag style
  * params:
@@ -239,7 +199,9 @@ function replace (variety,num) {
     $('#resultDesc').append(variety.replace("%data%",num));
 }
 
+
     /**
+     * Utils
      * Des: This is Log class for console to log the functions data.
      * auth: Haku Hal
      * data: 2017-7-17
@@ -255,6 +217,51 @@ var log={
             return console.log(func+" is executed & target value is "+val);
         }
     }
+
+
+
+/**
+ * Des: This is function for Animation
+ * auth: Haku Hal
+ * data: 2017-7-29
+ */
+
+
+function Animation(){
+    var stage_m,container_m;
+    console.log("canvas 创建成功："+w+" "+h);
+
+    stage_m = new createjs.Stage("messageCanvas");
+    stage_m.canvas.width=w;
+    stage_m.canvas.height=h;
+
+    console.log(w+" "+h);
+
+    var spriteSheet = new createjs.SpriteSheet({
+        framerate: listObj[0].rates,
+        // "images": ['./img/grunt1.png'],
+        "images": [listObj[0].src],
+        "frames": {
+            width:listObj[0].fx,
+            height:listObj[0].fy,
+            count:listObj[0].count
+        },
+        "animations": {
+            "run": [0, listObj[0].count-1 , "run"]
+        }
+    });
+    container_m = new createjs.Sprite(spriteSheet, "run");
+    container_m.set({x:0.18*w,y:0.08*h,scaleX: w*0.686/400,scaleY:h*0.598/550 });
+
+    stage_m.addChild( container_m);
+    createjs.Ticker.timingMode = createjs.Ticker.RAF;
+    createjs.Ticker.on('tick',stage_m);
+}
+
+
+
+
+
 
 /**
  * desc: weixin share function

@@ -60,6 +60,9 @@ body{
     line-height: 1.5rem;
     margin-bottom: 1vh;
 }
+.pageEnter{
+    z-index: 1;
+}
 
 .pageStart{
     z-index:5;
@@ -104,17 +107,25 @@ body{
 
     width: 100%;
     height:auto;
-
-    position: fixed;
-    z-index: 15;
+    /*position: fixed;*/
+    /*z-index: 15;*/
 }
 
 .page2{
     z-index: 20;
-    /*background: linear-gradient(180deg, #1c86ff 0%, #53c8ff 100%);*/
-    background: url("../img/GIF2.gif") 0 0 no-repeat;
+    background: linear-gradient(180deg, #1c86ff 0%, #53c8ff 100%);
+    /*background: url("../img/GIF2.gif") 0 0 no-repeat;*/
     background-size: 100vw;
 }
+
+.page2 #foodCanvas{
+
+    width: 100%;
+    height:auto;
+    /*position: fixed;*/
+    /*z-index: 15;*/
+}
+
 
 .page3{
     z-index: 30;
@@ -180,6 +191,15 @@ body{
     height: auto;
 }
 
+.page9 #stamp img{
+    width: 10rem;
+    height:10rem;
+    float: left;
+    position: absolute;
+    top:38vh;
+    left: 10vw;
+}
+
 .tag{
     display: flex;
     flex-wrap:wrap;
@@ -197,18 +217,37 @@ body{
 
 .tag #random{
 
-    font-size: 1rem;
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
 
 }
 
 .diagnosis{
-   font-size: 0.95rem;
-    line-height: 1.2rem;
+   font-size: 0.9rem;
+    line-height: 1rem;
 }
 
 .qrcode{
     width: 100%;
     height: auto;
     text-align: center;
-    margin-top:26vh;
+    margin-top:22vh;
 }
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0; /*中间状态 透明度为0*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+
+ .enterStamp
+ {-webkit-animation-name: fadeIn; /*动画名称*/
+     -webkit-animation-duration: 2s; /*动画持续时间*/
+     -webkit-animation-iteration-count: 1; /*动画次数*/
+     -webkit-animation-delay: 0s; /*延迟时间*/}

@@ -9,7 +9,13 @@ var str_survive='<p class="diagnosis">你的强迫症指数<span>%data%</span>�
 
 var fontUrl='http://assemble-10061151.cossh.myqcloud.com/ocd/simpfy.ttf';
 var grunt1Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt1.png';
-
+var grunt2Url='';
+var grunt3Url='';
+var grunt4Url='';
+var grunt5Url='';
+var grunt6Url='';
+var grunt7Url='';
+var grunt8Url='';
 
 var listObj=[];
 var grunt1={
@@ -26,3 +32,31 @@ var grunt1={
 };
 
 listObj.push(grunt1);
+
+var grunt2={
+    canvasId:"foodCanvas",
+    ox:549,
+    oy:761,
+    fx:400,
+    fy:555,
+    posrx:0.175,
+    posry:0.025,
+    count:179,
+    src:grunt1Url,
+    rates:15
+};
+
+listObj.push(grunt2);
+
+var grunt3={
+    canvasId:"messageCanvas",
+    ox:493,
+    oy:759,
+    fx:400,
+    fy:616,
+    posrx:0.175,
+    posry:0.025,
+    count:118,
+    src:grunt1Url,
+    rates:15
+};

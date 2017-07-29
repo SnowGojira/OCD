@@ -21,22 +21,25 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
-<body onload="Animation();">
+<body onload="giveGrades(0)">
 
   <section class="page preload none">
       <img src="img/preload.gif" alt="Assemble" id="logo">
       <!--This id is for changing the percentage.-->
       <div id="percent">100%</div>
   </section>
+  <section class="page pageEnter none">
 
-  <section class="page pageStart none">
-      <button class="buttonStart">开始答题</button>
       <div id="text1" class="message left"></div>
-      <div id="text2" class="message left"></div>
+      <div id="text2" class="message left" style="background: #000;">点击测试</div>
       <div id="text3" class="message right"></div>
       <div id="text4" class="message left"></div>
       <div id="text5" class="message right"></div>
       <div id="send"></div>
+  </section>
+
+  <section class="page pageStart none">
+      <button class="buttonStart">开始答题</button>
   </section>
 
   <ul class="hintBox none">
@@ -51,7 +54,7 @@
 
   </ul>
 
-  <section class="page page1" >
+  <section class="page page1 none" >
 
       <div class="select">
           <p class="quiz">看到从朋友圈冒出的小红点<br>必须立刻、马上、迅速戳破</p>
@@ -70,6 +73,7 @@
           <img class="button button2" src="img/w.png" id="no2" data-choice="0" alt="否"/>
       </div>
 
+      <canvas id="foodCanvas"></canvas>
   </section>
 
   <section class="page page3 none">
@@ -127,12 +131,12 @@
 
   </section>
 
-  <section class="page page9 none">
+  <section class="page page9">
       <div class="result">
           <img src="img/pageResult/pl1.png" style="width: 100%;height: auto" alt="抬头"/>
           <div class="tag">
               <img src="img/pageResult/pl2.png" style="width:2.7rem;height: 1rem">
-              <p id="random">100</p>
+              <p id="random"></p>
           </div>
           <div>
               <p class="diagnosis" style="margin-top:7vh;margin-bottom: 3vh">诊断及建议：</p>
@@ -144,7 +148,7 @@
                   <img src="img/pageResult/pl3.png" style="width: 6.5rem;height: 1.4rem;margin-top: 7vh;float:right;" alt="签名"/>
               </li>
               <li>
-                  <p id="date" style="font-size: 0.7rem;float: right;margin-top: 0.5rem;">2017年7月21日</p>
+                  <p id="date" style="font-size: 0.7rem;float: right;margin-top: 0.5rem;"></p>
               </li>
               <li>
                   <p style="float:right;font-size: 0.7rem;margin-top: 0.5rem;">(盖章有效)</p>
@@ -152,9 +156,13 @@
 
           </ul>
 
+          <div id="stamp" class="enterStamp">
+              <img src="img/pageResult/pls.png">
+          </div>
+
           <div class="qrcode">
               <img src="img/pageResult/pl4.png" style="width: 21vw;height: 21vw;"/>
-              <p style="font-size: 0.7rem;margin-top: 1.5rem;line-height: 1.1rem">若有未尽的类似临床表现<br>欢迎长按二维码回复后台<br><br>偷偷告诉你<br>这对于拯救地球意义重大</p>
+              <p style="font-size: 0.7rem;margin-top: 1.1rem;line-height: 1rem">若有未尽的类似临床表现<br>欢迎长按二维码回复后台<br><br>偷偷告诉你<br>这对于拯救地球意义重大</p>
           </div>
       </div>
 

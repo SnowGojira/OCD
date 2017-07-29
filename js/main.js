@@ -63,6 +63,11 @@ $(function () {
 
     var index=1;
 
+    $('#text2').click(function () {
+        $('.pageEnter').hide();
+        $('.pageStart').show();
+    });
+
     $('.buttonStart').click(function(){
         $('.pageStart').hide();
         $('.page1').show();
@@ -70,7 +75,6 @@ $(function () {
         $('.hintBox').attr('display','inline-block');
 
         pageClick(index);
-
         index++;
     });
 
@@ -80,6 +84,7 @@ $(function () {
             pageClick(index);
             index++;
     });
+
 
     $('.submit').click(function () {
 
@@ -99,9 +104,6 @@ $(function () {
     });
 
 
-
-
-
 });
 
 var toastTextAnimation=function(){
@@ -112,11 +114,14 @@ var toastTextAnimation=function(){
     //show the hint cover,give the href link
 
 
-
 };
-
+/**
+ * main page jump off logic
+ * @param index int current page index
+ */
 
 var pageClick=function (index){
+    //show & hide logic
     if(index==8){
         $('.button'+index).click(function () {
             $('.submit').show();
@@ -132,7 +137,10 @@ var pageClick=function (index){
         });
     }
 
+    //show Animation()
+     Animation(index);
 
+    //taking data monitor API
     $('#yes'+index).click(function () {
         var point=$(this).attr('data-choice');
         points.push(point);
@@ -148,7 +156,9 @@ var pageClick=function (index){
         points.push(point);
     });
 
-   changeHintTag(index);
+
+    //hint tag change function
+    changeHintTag(index);
 
 };
 
@@ -193,6 +203,24 @@ var giveGrades=function (num) {
         replace(str_heavy,num);
     }
 
+    //give a random number to random
+
+        var $chars = '0123456789';
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (var i = 0; i < 3; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+        }
+        $('#random').text(pwd);
+
+    //generate the date
+        var date = new Date();
+        var year,day,month;
+        year=date.getFullYear();
+        month=parseInt(date.getMonth())+1;
+        day=date.getDate();
+        $('#date').text(year+"年"+month+"月"+day+"日");
+        // console.log("年"+year+"月"+month+"日"+day);
 };
 
 function replace (variety,num) {
@@ -227,11 +255,11 @@ var log={
  */
 
 
-function Animation(){
+function Animation(index){
     var stage_m,container_m;
     console.log("canvas 创建成功："+w+" "+h);
 
-    var obj=listObj[0];
+    var obj=listObj[index-1];
 
     var W,H,scaleW,scaleH;
     W=800;

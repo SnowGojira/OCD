@@ -89,7 +89,7 @@ $(function () {
                 var point=parseInt(points[i]);
                 grades=grades+point;
                 console.log(point +" "+grades);
-            };
+            }
 
             $('.page8').hide();
             $('.page9').show();
@@ -169,7 +169,7 @@ var changeHintTag=function (str){
 
     log.a('changeHintTag',index);
 
-}
+};
 
     /**
      * des: judge the result then add the appropriate class the dom.
@@ -216,7 +216,7 @@ var log={
         a:function (func,val) {
             return console.log(func+" is executed & target value is "+val);
         }
-    }
+    };
 
 
 
@@ -231,27 +231,38 @@ function Animation(){
     var stage_m,container_m;
     console.log("canvas 创建成功："+w+" "+h);
 
+    var obj=listObj[0];
+
+    var W,H,scaleW,scaleH;
+    W=800;
+    H=h*W/w;
+    scaleW=obj.ox/800;
+    scaleH=obj.oy/H;
+
+    console.log(w+" "+h+" "+" "+W+" "+H);
+
     stage_m = new createjs.Stage("messageCanvas");
     stage_m.canvas.width=w;
     stage_m.canvas.height=h;
 
-    console.log(w+" "+h);
+
+
 
     var spriteSheet = new createjs.SpriteSheet({
-        framerate: listObj[0].rates,
+        framerate: obj.rates,
         // "images": ['./img/grunt1.png'],
-        "images": [listObj[0].src],
+        "images": [obj.src],
         "frames": {
-            width:listObj[0].fx,
-            height:listObj[0].fy,
-            count:listObj[0].count
+            width:obj.fx,
+            height:obj.fy,
+            count:obj.count
         },
         "animations": {
-            "run": [0, listObj[0].count-1 , "run"]
+            "run": [0, obj.count-1 , "run"]
         }
     });
     container_m = new createjs.Sprite(spriteSheet, "run");
-    container_m.set({x:0.18*w,y:0.08*h,scaleX: w*0.686/400,scaleY:h*0.598/550 });
+    container_m.set({x:obj.posrx*w,y:obj.posry*h,scaleX: w*scaleW*1.05/obj.fx,scaleY:h*scaleH*1.05/obj.fy});
 
     stage_m.addChild( container_m);
     createjs.Ticker.timingMode = createjs.Ticker.RAF;

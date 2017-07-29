@@ -14,8 +14,12 @@ var grunt1Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt1.png';
 var listObj=[];
 var grunt1={
     canvasId:"messageCanvas",
+    ox:549,
+    oy:754,
     fx:400,
     fy:550,
+    posrx:0.175,
+    posry:0.025,
     count:118,
     src:grunt1Url,
     rates:15

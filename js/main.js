@@ -9,8 +9,12 @@ var str_survive='<p class="diagnosis">你的强迫症指数<span>%data%</span>�
 
 var points=[];
 
+var w = document.documentElement.clientWidth,
+    h = document.documentElement.clientHeight;
+
 /**************************************preload Logic***********************************/
-window.onload=function(){
+/*window.onload=function(){
+
     manifest = [
         {src: 'img/simpfy.ttf', id: 'font'},
         {src: 'img/simpfy.ttf', id: 'font'}
@@ -28,18 +32,22 @@ window.onload=function(){
 };
 
 function handleFileProgress(){//加载中函数
-    var percent=loader.progress*100|0+'%';
-    document.getElementById('loadPercent').innerHTML=percent+"%";
+    // var percent=loader.progress*100|0+'%';
+    // document.getElementById('loadPercent').innerHTML=percent+"%";
 }
+
 
 function handleComplete(){
     //show pageStart Animation
 
-    /**
+    /!**
      * add the pageStart Animate
-     */
+     *!/
+
     toastTextAnimation();
-}
+}*/
+
+
 
 /**************************************Main Logic***********************************/
 
@@ -69,6 +77,8 @@ $(function () {
 
         index++;
     });
+
+
 
     $('.button').click(function(){
             pageClick(index);
@@ -145,6 +155,41 @@ var pageClick=function (index){
    changeHintTag(index);
 
 };
+
+
+var stage_m,container_m;
+function messageAnim(){
+    console.log("canvas 创建成功："+w+" "+h);
+
+    stage_m = new createjs.Stage("messageCanvas");
+    stage_m.canvas.width=w;
+    stage_m.canvas.height=h;
+
+    console.log(w+" "+h);
+
+    var spriteSheet = new createjs.SpriteSheet({
+        framerate: 15,
+        "images": ['./img/grunt1.png'],
+        "frames": {
+            width:400,
+            height:550,
+            count:118
+        },
+        "animations": {
+            "run": [0, 117, "run"]
+        }
+    });
+    container_m = new createjs.Sprite(spriteSheet, "run");
+    container_m.set({x:0.18*w,y:0.08*h,scaleX: w*0.686/400,scaleY:h*0.598/550 });
+
+    stage_m.addChild( container_m);
+    createjs.Ticker.timingMode = createjs.Ticker.RAF;
+    createjs.Ticker.on('tick',stage_m);
+}
+
+
+
+
 
 
 

@@ -8,7 +8,7 @@
 }
 
 body{
-    font-family: myFont Arial;
+    font-family: myFont;
     overflow: hidden;
     color: #fff;
 }
@@ -50,6 +50,7 @@ body{
 .select{
     width: 100%;
     height: auto;
+
     text-align: center;
     margin-top:11vh;
 }
@@ -62,7 +63,7 @@ body{
 
 .pageStart{
     z-index:5;
-    background: #000;
+
 }
 
 .hintBox{
@@ -94,42 +95,68 @@ body{
 .page1{
     z-index: 10;
     background: linear-gradient(180deg, #16ca17 0%, #00bd05 100%);
+    /*background: url("../img/GIF1.gif") 0 0 no-repeat;*/
+    /*background-size: 100vw;*/
 
+}
+
+.page1 #messageCanvas{
+
+    width: 100%;
+    height:auto;
+
+    position: fixed;
+    z-index: 15;
 }
 
 .page2{
     z-index: 20;
-    background: linear-gradient(180deg, #1c86ff 0%, #53c8ff 100%);
+    /*background: linear-gradient(180deg, #1c86ff 0%, #53c8ff 100%);*/
+    background: url("../img/GIF2.gif") 0 0 no-repeat;
+    background-size: 100vw;
 }
 
 .page3{
     z-index: 30;
-    background: linear-gradient(210deg, #f19000 0%, #eb5007 100%);
+    /*background: linear-gradient(210deg, #f19000 0%, #eb5007 100%);*/
+    background: url("../img/GIF3.gif") 0 0 no-repeat;
+    background-size: 100vw;
 }
 
 .page4{
     z-index: 40;
-    background: linear-gradient(180deg, #f4bbbc 0%, #ea314e 100%);
+    /*background: linear-gradient(180deg, #f4bbbc 0%, #ea314e 100%);*/
+    background: url("../img/GIF4.gif") 0 0 no-repeat;
+    background-size: 100vw;
+
 }
 
 .page5{
     z-index: 50;
-    background: linear-gradient(180deg, #74e310 0%, #4e9e0e 100%);
+    /*background: linear-gradient(180deg, #74e310 0%, #4e9e0e 100%);*/
+    background: url("../img/GIF5.gif") 0 0 no-repeat;
+    background-size: 100vw;
 }
 
 .page6{
     z-index: 60;
-    background: linear-gradient(180deg, #ee88aa 0%, #ea548d 100%);
+    /*background: linear-gradient(180deg, #ee88aa 0%, #ea548d 100%);*/
+    background: url("../img/GIF6.gif") 0 0 no-repeat;
+    background-size: 100vw;
 }
 
 .page7{
     z-index: 70;
-    background: linear-gradient(180deg, #faa93d 0%, #f88918 100%);
+    /*background: linear-gradient(180deg, #faa93d 0%, #f88918 100%);*/
+    background: url("../img/GIF7.gif") 0 0 no-repeat;
+    background-size: 100vw;
 }
 
 .page8{
     z-index: 80;
-    background: linear-gradient(180deg, #cdc1d2 0%, #f7f7f7 100%);
+    /*background: linear-gradient(180deg, #cdc1d2 0%, #f7f7f7 100%);*/
+    background: url("../img/GIF8.gif") 0 0 no-repeat;
+    background-size: 100vw;
 }
 
 

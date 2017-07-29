@@ -20,16 +20,10 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-    <script src="js/lib/easeljs-0.7.1.min.js"></script>
-    <script src="js/lib/preloadjs-0.6.2.min.js"></script>
-    <script src="js/lib/jquery-3.2.1.min.js"></script>
-    <script src="js/lib/jweixin-1.0.0.js"></script>
-    <script src="js/main.js"></script>
 </head>
-<body>
+<body onload="messageAnim();">
 
-  <section class="page preload">
+  <section class="page preload none">
       <img src="img/preload.gif" alt="Assemble" id="logo">
       <!--This id is for changing the percentage.-->
       <div id="percent">100%</div>
@@ -57,12 +51,15 @@
 
   </ul>
 
-  <section class="page page1 none">
+  <section class="page page1" >
+
       <div class="select">
           <p class="quiz">看到从朋友圈冒出的小红点<br>必须立刻、马上、迅速戳破</p>
           <img class="button button1" src="img/r.png" id="yes1" data-choice="18" alt="是"/>
           <img class="button button1" src="img/w.png" id="no1" data-choice="0" alt="否"/>
       </div>
+
+      <canvas id="messageCanvas"></canvas>
 
   </section>
 
@@ -165,5 +162,11 @@
 
   </section>
 
+  <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+  <script src="js/lib/easeljs-0.7.1.min.js"></script>
+  <script src="js/lib/preloadjs-0.6.2.min.js"></script>
+  <script src="js/lib/jquery-3.2.1.min.js"></script>
+  <script src="js/lib/jweixin-1.0.0.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /**
  * Created by hakuh on 2017/7/29.
  */
-var text_gif='<div class="textAnim"><img src="img/pageStart/text.gif"></div>';
+// var text_gif='<div class="textAnim"><img src="img/pageStart/text.gif"></div>';
 
 
 var str_light='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的早期患者<br>好棒棒，像你这样的人才已经不多了~</p>';
@@ -9,7 +9,7 @@ var str_medium='<p class="diagnosis">你的强迫症指数<span>%data%</span>分
 var str_heavy='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>是特新型手机病毒强迫症的晚期患者<br>治愈的可能性很小，请尽量保持心情愉快</p>';
 var str_survive='<p class="diagnosis">你的强迫症指数<span>%data%</span>分<br>特新型手机病毒强迫症的免疫者<br>天啊，你还是人吗？</p>';
 
-var startBGUrl='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt1.png';
+// var startBGUrl='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt1.png';
 var gifc='http://assemble-10061151.cossh.myqcloud.com/ocd/gifc-1.gif';
 var gif1='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF1.gif';
 var gif2='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF2.gif';
@@ -18,9 +18,9 @@ var gif4='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF4.gif';
 var gif5='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF5.gif';
 var gif6='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF6.gif';
 var gif7='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF7.gif';
-var gif8='';
+var gif8='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF8-1.gif';
 
-var fontUrl='http://assemble-10061151.cossh.myqcloud.com/ocd/simpfy.ttf';
+// var fontUrl='http://assemble-10061151.cossh.myqcloud.com/ocd/simpfy.ttf';
 var grunt1Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt1.png';
 var grunt2Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt2-2.png';
 // var grunt2Url='../img/grunt2.png';
@@ -29,7 +29,7 @@ var grunt4Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt3.png';
 var grunt5Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt5.png';
 var grunt6Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt3.png';
 var grunt7Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt6.png';
-var grunt8Url='http://assemble-10061151.cossh.myqcloud.com/ocd/8-4.png';
+var grunt8Url='';
 
 var listObj=[];
 // var stage1,container1;

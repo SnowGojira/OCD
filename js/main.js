@@ -24,8 +24,8 @@ window.onload=function(){
         {src: gif4, id: 'grunt4'},
         {src: gif5, id: 'grunt5'},
         {src: gif6, id: 'grunt6'},
-        {src: grunt8Url, id: 'grunt7'},
-        {src: gif7, id: 'grunt8'},
+        {src: gif8, id: 'grunt9'},
+        {src: gif7, id: 'grunt7'},
         {src: gifc, id: 'grunt8'}
 
 
@@ -216,7 +216,7 @@ var pageClick=function (index){
     if(index==8){
         //show Animation()
 
-        Animation(grunt8);
+        // Animation(grunt8);
 
         $('.button'+index).click(function () {
             $('.button8').hide();

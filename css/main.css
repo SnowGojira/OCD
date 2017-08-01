@@ -312,7 +312,7 @@ body{
     height:auto;
     position: fixed;
     z-index: 31;
-    top: 6vh;
+    top: 11vh;
 }
 
 .page3 #taoCanvas{
@@ -443,10 +443,18 @@ body{
 .page8{
     z-index: 80;
     /*background: linear-gradient(180deg, #cdc1d2 0%, #f7f7f7 100%);*/
-    background: linear-gradient(180deg, #111 0%, #333 100%);
+    background: linear-gradient(180deg, #8f3ea7 0%, #8f3ea7 20%, #430f62 80%,#430f62 100%);
     /*background: #333;*/
     /*background: url("../img/GIF8.gif") 0 0 no-repeat;*/
     background-size: 100vw;
+}
+.page8BG img{
+
+    width: 113vw;
+    height:auto;
+    position: fixed;
+    z-index: 81;
+    top: 0vh;
 }
 
 .page8 #mobileCanvas{

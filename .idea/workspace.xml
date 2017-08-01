@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="115d9d03-f244-4060-9b64-b3f36324b279" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/explain.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/grunt3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/grunt5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/grunt6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/bgm.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lib/soundjs-0.6.2.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF4.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF5.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF6.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF7.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/GIF8.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/grunt1.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/pageStart/p1t1.png" afterPath="$PROJECT_DIR$/img/pageStart/p1t1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/pageStart/p1t2.png" afterPath="$PROJECT_DIR$/img/pageStart/p1t2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/simpfy.ttf" afterPath="$PROJECT_DIR$/img/simpfy.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/manifest.js" afterPath="$PROJECT_DIR$/js/manifest.js" />
     </list>
     <ignored path="ob.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -422,7 +400,7 @@
       <workItem from="1501344039262" duration="6445000" />
       <workItem from="1501394930496" duration="3938000" />
       <workItem from="1501410723850" duration="3489000" />
-      <workItem from="1501427253673" duration="51025000" />
+      <workItem from="1501427253673" duration="51089000" />
     </task>
     <task id="LOCAL-00001" summary="add Log function and the give grades function">
       <created>1500288959093</created>
@@ -557,11 +535,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501332063695</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add new branch to clean code">
+      <created>1501577849109</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1501577849109</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159276000" />
+    <option name="totallyTimeSpent" value="159340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -618,7 +603,8 @@
     <MESSAGE value="make the Animation to fix all the device dynamically" />
     <MESSAGE value="add random and date logic to the result page" />
     <MESSAGE value="add the animate to stamp" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the animate to stamp" />
+    <MESSAGE value="add new branch to clean code" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new branch to clean code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

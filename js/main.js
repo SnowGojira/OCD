@@ -8,19 +8,32 @@ var points=[];
 var w = document.documentElement.clientWidth,
     h = document.documentElement.clientHeight;
 
+
+
 /**************************************preload Logic***********************************/
-/*window.onload=function(){
+window.onload=function(){
 
     manifest = [
         {src: 'img/simpfy.ttf', id: 'font'},
-        {src: 'img/simpfy.ttf', id: 'font'}
+        {src: 'img/bgm.mp3', id: 'bgm'},
+        // {src: 'http://assemble-10061151.cossh.myqcloud.com/ocd/grunt1.png', id: 'grunt1'},
+        {src: gif1, id: 'grunt1'},
+        {src: gif2, id: 'grunt2'},
+        // {src: grunt3Url, id: 'grunt3-1'},
+        {src: gif3, id: 'grunt3'},
+        {src: gif4, id: 'grunt4'},
+        {src: gif5, id: 'grunt5'},
+        {src: gif6, id: 'grunt6'},
+        {src: grunt8Url, id: 'grunt7'},
+        {src: gif7, id: 'grunt8'},
+        {src: gifc, id: 'grunt8'}
 
 
     ];//预加载
     loader = new createjs.LoadQueue(false);
     loader.setMaxConnections(100);
     loader.maintainScriptOrder=true;
-
+    loader.installPlugin(createjs.Sound);
     loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
     loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
     loader.loadManifest(manifest);
@@ -28,20 +41,22 @@ var w = document.documentElement.clientWidth,
 };
 
 function handleFileProgress(){//加载中函数
-    // var percent=loader.progress*100|0+'%';
-    // document.getElementById('loadPercent').innerHTML=percent+"%";
+    var percent=loader.progress*100|0+'%';
+    document.getElementById('percent').innerHTML=percent+"%";
 }
 
 
 function handleComplete(){
     //show pageStart Animation
 
-    /!**
+    /**
      * add the pageStart Animate
-     *!/
+     */
 
-    toastTextAnimation();
-}*/
+    $('.preload').hide();
+    $('.pageEnter').show();
+    page1Animation();
+}
 
 
 
@@ -69,6 +84,7 @@ $(function () {
     });
 
     $('.buttonStart').click(function(){
+
         $('.pageStart').hide();
         $('.page1').show();
         $('.hintBox').show();
@@ -85,83 +101,165 @@ $(function () {
             index++;
     });
 
+    //提交监听事件
 
-    $('.submit').click(function () {
-
-            var grades=0;
-            console.log(points);
-            for(var i=0;i<=7;i++){
-                var point=parseInt(points[i]);
-                grades=grades+point;
-                console.log(point +" "+grades);
-            }
-
-            $('.page8').hide();
-            $('.page9').show();
-
-        giveGrades(grades);
-
+    $('.submit1').click(function(){
+        TDAPP.onEvent("result00");
+        resultPage();
     });
 
+    $('.submit2').click(function(){
+        TDAPP.onEvent("result30");
+        resultPage();
+    });
+
+    $('.submit3').click(function(){
+        TDAPP.onEvent("result70");
+        resultPage();
+    });
+
+    $('.submit4').click(function(){
+        TDAPP.onEvent("result100");
+        resultPage();
+    });
 
 });
 
-var toastTextAnimation=function(){
-    //show first toast
-    //show first gif animation
-    //show second toast
-    //show second gif animation
-    //show the hint cover,give the href link
+var page1Animation=function(){
+    // $('.pageEnter').append(text_anim1);
+   $('.text1').show();
+    $('#enter').click(function(){
+        $('.pageEnter').hide();
+        $('.pageStart').show();
+
+        var audio = $("#bgm")[0];
+        audio.play();
+
+    });
+
+    setTimeout(function () {
+        $('#text2').show();
+        setTimeout(function () {
+            $('.textAnim').show();
+            setTimeout(function(){
+                $('#sendButton').attr('src','img/pageStart/sendBtn.gif');
+                $('#sendButton').click(function () {
+
+                    $('.textAnim').hide();
+                    $('#text3').show();
+
+                    $(this).remove();
+                    $('.sendBtn').append('<img id="sendButton" src="img/pageStart/sendBtn.png">');
+
+                    setTimeout(function () {
+                        $('#text4').show();
+                    },500);
+
+                    setTimeout(function(){
+                        $('#text5').show();
+                        setTimeout(function () {
+                            $('#gifAnimation').attr('src','img/pageStart/enter.gif');
+
+                        },1000);
+
+                    },1000);
+                })
+            },6000);
+        },500);
+
+
+    },1000);
+
 
 
 };
+
+
+
+var resultPage  = function(){
+    var grades=getGrades();
+
+    $('.page8').hide();
+    $('.page9').show();
+
+    giveGrades(grades);
+}
+
+
+
+
 /**
  * main page jump off logic
  * @param index int current page index
  */
 
 var pageClick=function (index){
-    //show & hide logic
-    if(index==8){
-        $('.button'+index).click(function () {
-            $('.submit').show();
-            console.log('page'+index);
-        });
-
-    }else{
-        $('.button'+index).click(function () {
-            console.log('page'+index);
-            $('.page'+index).hide();
-            $('.page'+(index+1)).show();
-
-        });
-    }
-
-    //show Animation()
-     Animation(index);
 
     //taking data monitor API
     $('#yes'+index).click(function () {
         var point=$(this).attr('data-choice');
         points.push(point);
-        console.log('yes'+index);
+        // console.log('yes'+index);
         TDAPP.onEvent("shi"+index);
 
     });
     $('#no'+index).click(function () {
-        console.log('no'+index);
+        // console.log('no'+index);
         TDAPP.onEvent("fou"+index);
 
         var point=$(this).attr('data-choice');
         points.push(point);
     });
 
+    //show & hide logic
+
+    if(index==8){
+        //show Animation()
+
+        Animation(grunt8);
+
+        $('.button'+index).click(function () {
+            $('.button8').hide();
+            $('.quiz').hide();
+            $('.hintBox').hide();
+            setTimeout(showSubmit(),1000);
+        });
+
+    } else{
+        $('.button'+index).click(function () {
+            PageChange(index);
+        });
+    }
+
+
+    function PageChange(index){
+        console.log('page'+index);
+        $('.page'+index).hide();
+        $('.page'+(index+1)).show();
+    }
 
     //hint tag change function
     changeHintTag(index);
 
 };
 
+var showSubmit=function(){
+    var grade=getGrades();
+
+    if (grade===0){
+        $('.submit1').show();
+        console.log("#submit1");
+    }else if(grade>0 && grade<=30){
+        $('.submit2').show();
+        console.log("#submit2");
+    }else if(grade>30 && grade <=70){
+        $('.submit3').show();
+        console.log("#submit3");
+    }else {
+        $('.submit4').show();
+        console.log("#submit4");
+    }
+};
 
 /**
  * des:change the hint tag style
@@ -227,6 +325,26 @@ function replace (variety,num) {
     $('#resultDesc').append(variety.replace("%data%",num));
 }
 
+var getGrades= function () {
+    // var grades=0;
+
+    var grade=0;
+    console.log(points);
+
+    for(var i=0;i<=7;i++){
+
+        var point=parseInt(points[i]);
+
+        grade=grade+point;
+
+        console.log(point +" "+grade);
+    }
+
+    console.log("成绩:"+grade);
+
+    return grade;
+}
+
 
     /**
      * Utils
@@ -255,11 +373,14 @@ var log={
  */
 
 
-function Animation(index){
-    var stage_m,container_m;
+function Animation(obj){
+    var stage,container,canvas;
+
     console.log("canvas 创建成功："+w+" "+h);
 
-    var obj=listObj[index-1];
+    var obj=obj;
+
+    // obj.s=obj.s;
 
     var W,H,scaleW,scaleH;
     W=800;
@@ -269,10 +390,9 @@ function Animation(index){
 
     console.log(w+" "+h+" "+" "+W+" "+H);
 
-    stage_m = new createjs.Stage("messageCanvas");
-    stage_m.canvas.width=w;
-    stage_m.canvas.height=h;
-
+    stage = new createjs.Stage(obj.canvasId);
+    stage.canvas.width=w;
+    stage.canvas.height=h;
 
 
 
@@ -289,12 +409,15 @@ function Animation(index){
             "run": [0, obj.count-1 , "run"]
         }
     });
-    container_m = new createjs.Sprite(spriteSheet, "run");
-    container_m.set({x:obj.posrx*w,y:obj.posry*h,scaleX: w*scaleW*1.05/obj.fx,scaleY:h*scaleH*1.05/obj.fy});
+    container = new createjs.Sprite(spriteSheet, "run");
+    container.set({x:obj.posrx*w,y:obj.posry*h,scaleX: w*scaleW*obj.ratio/obj.fx,scaleY:h*scaleH*obj.ratio/obj.fy});
 
-    stage_m.addChild( container_m);
+    stage.addChild( container);
+
     createjs.Ticker.timingMode = createjs.Ticker.RAF;
-    createjs.Ticker.on('tick',stage_m);
+    createjs.Ticker.on('tick',stage);
+
+    console.log("帧率："+createjs.Ticker.getMeasuredFPS());
 }
 
 

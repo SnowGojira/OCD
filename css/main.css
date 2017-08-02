@@ -90,7 +90,7 @@ body{
 .sendBtn{
     position: fixed;
     z-index: 3;
-    bottom: 1.85vh;
+    bottom: 2.1vh;
     right: 4.5vw;
 }
 

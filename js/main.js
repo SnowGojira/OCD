@@ -5,9 +5,8 @@
 
 var points=[];
 
-var w = document.documentElement.clientWidth,
-    h = document.documentElement.clientHeight;
-
+/*var w = document.documentElement.clientWidth,
+    h = document.documentElement.clientHeight;*/
 
 
 /**************************************preload Logic***********************************/
@@ -362,8 +361,7 @@ var log={
         a:function (func,val) {
             return console.log(func+" is executed & target value is "+val);
         }
-    };
-
+     };
 
 
 /**
@@ -373,7 +371,7 @@ var log={
  */
 
 
-function Animation(obj){
+/*function Animation(obj){
     var stage,container,canvas;
 
     console.log("canvas 创建成功："+w+" "+h);
@@ -418,7 +416,7 @@ function Animation(obj){
     createjs.Ticker.on('tick',stage);
 
     console.log("帧率："+createjs.Ticker.getMeasuredFPS());
-}
+}*/
 
 
 

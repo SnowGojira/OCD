@@ -21,9 +21,9 @@ var gif7='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF7.gif';
 var gif8='http://assemble-10061151.cossh.myqcloud.com/ocd/GIF8-1.gif';
 
 // var fontUrl='http://assemble-10061151.cossh.myqcloud.com/ocd/simpfy.ttf';
+/*
 var grunt1Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt1.png';
 var grunt2Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt2-2.png';
-// var grunt2Url='../img/grunt2.png';
 var grunt3Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt3.png';
 var grunt4Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt3.png';
 var grunt5Url='http://assemble-10061151.cossh.myqcloud.com/ocd/grunt5.png';
@@ -177,4 +177,4 @@ var gruntEnd={
     rates:15
 };
 
-listObj.push(gruntEnd);
+listObj.push(gruntEnd);*/

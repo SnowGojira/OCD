@@ -137,9 +137,11 @@ var page1Animation=function(){
     });
 
     setTimeout(function () {
-        $('#text2').show();
+        $('.textAnim').show();
+        //
         setTimeout(function () {
-            $('.textAnim').show();
+
+
             setTimeout(function(){
                 $('#sendButton').attr('src','img/pageStart/sendBtn.gif');
                 $('#sendButton').click(function () {
@@ -157,7 +159,8 @@ var page1Animation=function(){
                     setTimeout(function(){
                         $('#text5').show();
                         setTimeout(function () {
-                            $('#gifAnimation').attr('src','img/pageStart/enter.gif');
+                            $('#text2').show();
+                            // $('#gifAnimation').attr('src','img/pageStart/enter.gif');
 
                         },1000);
 
@@ -167,8 +170,7 @@ var page1Animation=function(){
         },500);
 
 
-    },1000);
-
+    },2500);
 
 
 };
@@ -211,6 +213,9 @@ var pageClick=function (index){
     });
 
     //show & hide logic
+
+        $('.select').show();
+        // $('.select').addClass('mainIn');
 
     if(index==8){
         //show Animation()

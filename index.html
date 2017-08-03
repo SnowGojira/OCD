@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>你有病你知道吗？</title>
+    <title>你有病吗？</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,25 +21,48 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
-<body onload="giveGrades(0)">
 
-  <section class="page preload none">
+<body>
+
+  <section class="page preload">
       <img src="img/preload.gif" alt="Assemble" id="logo">
       <!--This id is for changing the percentage.-->
       <div id="percent">100%</div>
   </section>
   <section class="page pageEnter none">
+      <!--<div id="text1"></div>-->
+      <div  id="text1" class="messageLeft">
+          <img src="img/pageStart/p1t1.png">
+      </div>
+      <div id="text2" class="messageLeft none">
+          <img id="gifAnimation" src="img/pageStart/p1t2.png">
+      </div>
+      <div id="enter"></div>
+      <div id="text3" class="messageLeft none">
+          <div class="messageRight">
+              <img src="img/pageStart/p1t3.png">
+          </div>
 
-      <div id="text1" class="message left"></div>
-      <div id="text2" class="message left" style="background: #000;">点击测试</div>
-      <div id="text3" class="message right"></div>
-      <div id="text4" class="message left"></div>
-      <div id="text5" class="message right"></div>
-      <div id="send"></div>
+      </div>
+      <div id="text4" class="messageLeft none">
+          <img src="img/pageStart/p1t4.png">
+      </div>
+      <div id="text5" class="messageLeft none">
+          <div class="messageRight">
+              <img src="img/pageStart/p1t56.png">
+          </div>
+      </div>
+
+      <div class="send"><img src="img/pageStart/banner.png"/></div>
+      <div class="textAnim none"><img src="img/pageStart/text.gif"></div>
+      <div class="sendBtn"><img id="sendButton" src="img/pageStart/sendBtn.png"></div>
   </section>
-
+  <audio src="img/bgm.mp3" id="bgm" loop="loop" ></audio>
   <section class="page pageStart none">
-      <button class="buttonStart">开始答题</button>
+      <div class="buttonRound buttonStart"></div>
+      <div class="buttonRound shadow"></div>
+      <div class="startBG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/gifc-1.gif"></div>
+      <div class="startExp"><img src="img/explain.png"/></div>
   </section>
 
   <ul class="hintBox none">
@@ -55,83 +78,110 @@
   </ul>
 
   <section class="page page1 none" >
-
-      <div class="select">
-          <p class="quiz">看到从朋友圈冒出的小红点<br>必须立刻、马上、迅速戳破</p>
+      <!--<div class=""-->
+      <div class="page1BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF1.gif"/></div>
+      <div class="select select1">
+          <p class="quiz">朋友圈又见红？<br>不能忍</p>
           <img class="button button1" src="img/r.png" id="yes1" data-choice="18" alt="是"/>
           <img class="button button1" src="img/w.png" id="no1" data-choice="0" alt="否"/>
       </div>
 
-      <canvas id="messageCanvas"></canvas>
+      <!--<canvas id="messageCanvas"></canvas>-->
 
   </section>
 
   <section class="page page2 none">
-      <div class="select">
-          <p class="quiz">每次召唤外卖<br>都要跟踪无数次小哥到哪了</p>
+      <div class="page2BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF2.gif"/></div>
+
+      <div class="select select2">
+          <p class="quiz">等外卖时不追踪它的点位？<br>不能忍</p>
           <img class="button button2" src="img/r.png" id="yes2" data-choice="12" alt="是"/>
           <img class="button button2" src="img/w.png" id="no2" data-choice="0" alt="否"/>
       </div>
 
-      <canvas id="foodCanvas"></canvas>
+      <!--<canvas id="foodCanvas"></canvas>-->
   </section>
 
   <section class="page page3 none">
-      <div class="select">
-          <p class="quiz">要不要剁手买买买呢？<br>先把买家秀一张不漏地考察一遍再说</p>
+      <div class="page3BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF3-2.gif"/></div>
+      <div class="select select3">
+          <p class="quiz">剁手前不侦查一遍买家秀？<br>不能忍</p>
           <img class="button button3" src="img/r.png" id="yes3" data-choice="15" alt="是"/>
           <img class="button button3" src="img/w.png" id="no3" data-choice="0" alt="否"/>
       </div>
 
+      <!--<canvas id="taoCanvas"></canvas>-->
   </section>
 
   <section class="page page4 none">
-      <div class="select">
-          <p class="quiz">自拍照必须美颜才能发朋友圈<br>不然就像裸奔，怪害羞的</p>
+      <div class="page4BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF4.gif"/></div>
+      <div class="select select4">
+          <p class="quiz">发照片前不美颜／不滤镜？<br>那不就是裸奔？不能忍</p>
           <img class="button button4" src="img/r.png" id="yes4" data-choice="16" alt="是"/>
           <img class="button button4" src="img/w.png" id="no4" data-choice="0" alt="否"/>
       </div>
-
+      <!--<canvas id="selfCanvas"></canvas>-->
   </section>
 
   <section class="page page5 none">
-      <div class="select">
-          <p class="quiz">这部电影评分多少？<br>我从不看X分以下的电影</p>
+      <div class="page5BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF5.gif"/></div>
+      <div class="select select5">
+          <p class="quiz">看电影前不查它有几颗星？<br>不能忍</p>
           <img class="button button5" src="img/r.png" id="yes5" data-choice="9" alt="是"/>
           <img class="button button5" src="img/w.png" id="no5" data-choice="0" alt="否"/>
       </div>
 
+      <!--<canvas id="douCanvas"></canvas>-->
   </section>
 
   <section class="page page6 none">
-      <div class="select">
-          <p class="quiz">弹幕就是视频的下饭菜<br>必须得开</p>
+      <div class="page6BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF7.gif"/></div>
+      <div class="select select6">
+          <p class="quiz">撸剧不开弹幕？<br>不能忍</p>
           <img class="button button6" src="img/r.png" id="yes6" data-choice="7" alt="是"/>
           <img class="button button6" src="img/w.png" id="no6" data-choice="0" alt="否"/>
       </div>
-
+      <!--<canvas id="danCanvas"></canvas>-->
   </section>
 
   <section class="page page7 none">
-      <div class="select">
-          <p class="quiz">今天大家又在<br>热（ba）搜（gua）什么呢？</p>
+      <div class="page7BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF6.gif"/></div>
+      <div class="select select7">
+          <p class="quiz">刷围脖不刷热（bā）搜（guà）？<br>不能忍</p>
           <img class="button button7" src="img/r.png" id="yes7" data-choice="6" alt="是"/>
           <img class="button button7" src="img/w.png" id="no7" data-choice="0" alt="否"/>
       </div>
-
+      <!--<canvas id="weiboCanvas"></canvas>-->
   </section>
 
   <section class="page page8 none">
-      <div class="select">
-          <p class="quiz">“唉我手机呢？”“有充电宝吗？”“wifi密码多少？”<br>每天呈360°无死角3D环绕音出现</p>
+      <div class="page8BG"><img src="http://assemble-10061151.cossh.myqcloud.com/ocd/GIF8-1.gif"/></div>
+      <div class="select select8">
+          <p class="quiz">手机没在／没电／没网？<br>不能忍</p>
           <img class="button button8" src="img/r.png" id="yes8" data-choice="17" alt="是"/>
           <img class="button button8" src="img/w.png" id="no8" data-choice="0" alt="否"/>
-          <button class="submit none">提交结果</button>
+
+          <div class="submit submit1 none" >
+              <div class="buttonRound buttonSubmit"></div>
+              <div class="buttonRound s_shadow"></div>
+          </div>
+          <div class="submit submit2 none" >
+              <div class="buttonRound buttonSubmit"></div>
+              <div class="buttonRound s_shadow"></div>
+          </div>
+          <div class="submit submit3 none">
+              <div class="buttonRound buttonSubmit"></div>
+              <div class="buttonRound s_shadow"></div>
+          </div>
+          <div class="submit submit4 none" >
+              <div class="buttonRound buttonSubmit"></div>
+              <div class="buttonRound s_shadow"></div>
+          </div>
       </div>
-
+      <!--<canvas id="mobileCanvas"></canvas>-->
   </section>
-
-  <section class="page page9">
+  <!--<canvas id="animCanvas"></canvas>-->
+  <section class="page page9 none">
       <div class="result">
           <img src="img/pageResult/pl1.png" style="width: 100%;height: auto" alt="抬头"/>
           <div class="tag">
@@ -162,7 +212,7 @@
 
           <div class="qrcode">
               <img src="img/pageResult/pl4.png" style="width: 21vw;height: 21vw;"/>
-              <p style="font-size: 0.7rem;margin-top: 1.1rem;line-height: 1rem">若有未尽的类似临床表现<br>欢迎长按二维码回复后台<br><br>偷偷告诉你<br>这对于拯救地球意义重大</p>
+              <p style="font-size: 0.7rem;margin-top: 1.1rem;line-height: 1rem">假如你还有其他类似的临床症状<br>欢迎长按二维码关注医生并留言<br>看情况回，你知道的，医生很忙</p>
           </div>
       </div>
 
@@ -171,11 +221,15 @@
   </section>
 
   <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-  <script src="js/lib/easeljs-0.7.1.min.js"></script>
-  <script src="js/lib/preloadjs-0.6.2.min.js"></script>
+
   <script src="js/lib/jquery-3.2.1.min.js"></script>
   <script src="js/lib/jweixin-1.0.0.js"></script>
-  <script src="js/manifest.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/lib/easeljs-0.7.1.min.js"></script>
+  <script src="js/lib/preloadjs-0.6.2.min.js"></script>
+  <script src="js/lib/soundjs-0.6.2.min.js"></script>
+  <script src="js/manifest.min.js"></script>
+  <!--<script src="js/manifest.js"></script>-->
+  <script src="js/main.min.js"></script>
+  <!--<script src="js/main.js"></script>-->
 </body>
 </html>
